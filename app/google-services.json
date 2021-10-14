@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "844627855316",
+    "firebase_url": "https://chatapp-d4aa5-default-rtdb.firebaseio.com",
+    "project_id": "chatapp-d4aa5",
+    "storage_bucket": "chatapp-d4aa5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844627855316:android:01486523090b76e8403841",
+        "android_client_info": {
+          "package_name": "com.lionmgtllcagencyp.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844627855316-8a0hl58tf6mqsfk16p5qfn0og8v3k998.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9nBO85KMldMDEaNhVxCGKxkm2yplaOEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844627855316-8a0hl58tf6mqsfk16p5qfn0og8v3k998.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
