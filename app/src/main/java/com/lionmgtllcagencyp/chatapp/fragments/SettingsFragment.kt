@@ -186,7 +186,6 @@ class SettingsFragment : Fragment() {
                         usersReference?.updateChildren(mapCoverImage)
                         coverChecker = ""
 
-
                     }else{
                         val mapProfileImage = HashMap<String,Any>()
                         mapProfileImage["profile"] = url

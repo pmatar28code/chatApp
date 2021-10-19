@@ -1,11 +1,17 @@
 package com.lionmgtllcagencyp.chatapp.adapters
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.lionmgtllcagencyp.chatapp.MainActivity
+import com.lionmgtllcagencyp.chatapp.MessageChatActivity
 import com.lionmgtllcagencyp.chatapp.R
 import com.lionmgtllcagencyp.chatapp.modelClasses.Users
 import com.squareup.picasso.Picasso
@@ -30,6 +36,28 @@ class UserAdapter(
         val user = mUsersList[position]
         holder.userNameTxt.text = user.getUserName()
         Picasso.get().load(user.getProfile()).into(holder.profileImageView)
+
+        holder.itemView.setOnClickListener {
+            val options = arrayOf<CharSequence>(
+                "Send Message",
+                "Visit Profile"
+            )
+            val builder = AlertDialog.Builder(mContext)
+            builder.setTitle("Select an Option")
+            builder.setItems(options,DialogInterface.OnClickListener{dialog, position ->
+                if(position == 0){
+                    val intent = Intent(mContext, MessageChatActivity::class.java)
+                    intent.putExtra("visit_id",user.getUID())
+                    mContext.startActivity(intent)
+                }
+                if(position == 1){
+
+                }
+            })
+            builder.show()
+
+
+        }
     }
 
     override fun getItemCount(): Int {
